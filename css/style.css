@@ -37,8 +37,6 @@
 }
 
 body {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     font-family: "Roboto", sans-serif; 
@@ -74,7 +72,7 @@ h3 {
     font-size: 20px;
 }
 
-.description-text, a{
+.hero-secundari-text, a {
     color: #e5e7eb;
     margin-bottom: 0;
 }
@@ -93,39 +91,19 @@ Layout
 ================= */
 
 /* header*/
-.container {
-    max-width: 950px;
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px;
-    margin: 0 auto;
-    margin-top: 6px;
+.dark-color {
+    background-color: #1f2937;
 }
 
-.header-nav {
+header,
+section {
+    padding: 10px 50px;
+}
+
+.container {
     display: flex;
     justify-content: space-between;
-}
-
-.header-main {
-    display: flex;
-    padding: 10px 0;
-    margin: 40px 0;
-}
-
-.header-main-content {
-    margin-right: 8px;
-}
-
-.header-image {
-    width: 100%;
-    min-width: 250px;
-    height: 200px;
-}
-
-header, footer {
-    background-color: #1F2937;
-    width: 100%;
+    align-items: center;
 }
 
 /* button */
@@ -136,7 +114,7 @@ header, footer {
     font-weight: 700;
     color: #f9faf8;
     background: #3882f6;
-    margin: 6px 0;
+    margin: 10px 0;
     cursor: pointer;
 }
 
@@ -147,19 +125,18 @@ header, footer {
 }
 
 /* navigation */
-nav ul {
+menu {
     list-style: none;
     display: flex;
     justify-content: center;
 }
 
 nav li {
-    margin-left: 25px;
+    margin-left: 35px;
 }
 
 li a {
     text-transform: uppercase;
-    padding: 6px 0;
 }
 
 .current-page-link {
@@ -167,44 +144,57 @@ li a {
 }
 
 /* main section */
-.main {
+main {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 20px;
 }
 
-.section-card {
-    width: 100%;
-    max-width: 800px;
+.hero {
+    padding: 20px 50px;
+}
+
+.flex-column {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin-right: 10px;
+}
+
+.hero-images {
+    width: 100%;
+    max-width: 550px;
+    height: 200px;
+}
+
+.infomation {
+    text-align: center;
+}
+
+.flex-row {
+    max-width: 690px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0;
     margin: 0 auto;
-    margin-bottom: 40px;
 }
 
 .card {
-    width: 200px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-   /*  border-radius: 10px; */
-    padding: 10px;
-    margin: 10px ;
+    margin: 10px;
 }
 
 .card-image {
     width: 100%;
-    height: 150px;
-   
+    min-height: 100px;
     border-radius: 10px;
     margin-bottom: 8px;
 }
 
-.card-description {
-    margin-bottom: 12px;
-}
 
 .card-link {
+    width: fit-content;
     background: #edb041;
     color: #1F2937;
 }
@@ -219,20 +209,17 @@ li a {
 .quote-section {
     background: #e5e7eb;
     font-weight: 300;
-}
-
-.guote-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 10px;
+    font-style: italic;
+    padding: 20px 50px;
 }
 
 .quote-text {
+    margin: 20px 50px;
     font-size: 36px;
     color: #1f2937;
 }
 
-.right-quote {
+.quote-author {
     margin-top: 0;
     font-weight: 700;
     text-align: right;
@@ -240,21 +227,19 @@ li a {
 
 /* email-collector */
 .email-collector{
-    width: 100%;
-    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin: 40px auto;
+    border-radius: 10px;
+    padding: 30px 50px;
+    background: #3882f6;
 }
 
-.email-collector-container {
-    max-width: 850px;
-    color: #f9faf8;
-    background: #3882f6;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: 50px auto;
-    padding: 30px;
-    border-radius: 6px;
+section.content {
+    padding: 0;
+    
 }
 
 .btn-email {
@@ -264,73 +249,59 @@ li a {
 
 /* footer */
 footer {
-    text-align:  center;
+    text-align:center;
     padding: 25px 0;
     font-size: 16px;
+    color: #f9faf8;
 }
 
 /* =================
 Media Queries
 ================= */
-@media (max-width: 650px) {
-    .site-logo { 
-        margin-bottom: 4px;
-    }
-
-    .header-main {
+@media screen and (max-width: 768px) {
+    .container {
         flex-direction: column;
-    }
-
-    .header-main-content {
-        margin-right: 0;
-        margin-bottom: 8px;
+        align-items: flex-start;
     }
     
-    .header-main-content {
+    nav menu {
+        flex-direction: column;
+        
+    }
+
+    nav li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .flex-column {
         margin-right: 0;
     }
 
-    .header-nav {
-        flex-direction: column;
-    }
-
-    .header-nav li {
-        margin-left: 0;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    .section-card {
+    .flex-row {
         flex-direction: column;
     }
 
     .card {
-        width: 100%;
-        margin: 0 auto;
+        margin: 10px 0;
     }
 
-    .card-image {
-        height: 200px;
+    .quote-section {
+        padding: 20px 0;
+    }
+    .quote-author {
+        text-align: center;
     }
 
-    .email-collector-container {
+    .email-collector {
         flex-direction: column;
+        width: 100%;
     }
 
-    .btn {
-        margin-bottom: 12px;
+    .email-collector button {
+        margin-bottom: 10px;
     }
 
-    .btn-email {
-        margin-top: 10px;
-    }
+
 
 }
-
-
-
-
-
-
