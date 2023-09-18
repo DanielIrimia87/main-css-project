@@ -8,7 +8,7 @@ The assignment is to copy the design of the given image using HTML and CSS.
 
  Newsletter features fun tips, important facts, and the latest news happening in the world of music, also feature the best tips for creating your own music, the best music gear,learn how to sing and much more.
  
-# Link to the pproject : 
+# Link to the project : 
 https://danielirimia87.github.io/main-css-project/
 
 
